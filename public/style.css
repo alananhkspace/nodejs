@@ -1,0 +1,150 @@
+/* Add Google font*/
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+/* All class using same dataset */
+:root{
+    /* Define variable*/
+    --accent:#EF724B ; /* button color*/
+    --accentHover : #DFCB84; /*Hover color */
+    --dark60 : rgba(68,90,139,0.6); /* 0.6 =60% */
+    --Light: #FFFFFF;
+    --transition:all 0.3s ease 0s ; /* Define delay time */
+
+}
+/* All Section */
+*{
+    /*clear margin and padding */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    height: 100%; /* Fixed Height using Scroll */
+    overflow: auto;
+
+}
+body {
+    /* Gradient Shade color */
+    /*background: linear-gradient(
+        var(--dark60), var(--dark60)
+            ),
+            url(./image/fireforce.png);*/
+            background-image:url(image/fireforce.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+}
+a , button , .logo{
+    font-family: "Lobster",sans-serif;
+    color: var(--Light);
+
+}
+a , button, .logo{
+    cursor: pointer;
+}
+main{
+    height: 100;
+    display: grid;
+    grid-template-columns: minmax(60px, 1fr) repeat(6, minmax(50px, 190px)) minmax(60px, 1fr);
+}
+header{
+    grid-column: 2/ span 6 ;
+}
+nav{
+    display: flex;
+    align-items: center;
+    height: 150px ;
+}
+.link{
+    margin-left: auto;
+}
+.link a, .link button{  
+    font-size: 1.5rem ;
+    font-weight: 400;
+    transition: var(--transition);
+
+}
+.link a:hover{
+    color:var(--accent);
+}
+.button_login{
+    border: none;
+    background-color: var(--accent);
+    padding: 8px 25px;
+    transition: var(--transition);
+}
+.button_login:hover{
+ color: var(--accentHover);
+}
+.info{
+    grid-column: 3 / span 4 ;
+    margin-top: 23%;
+    text-align: center;
+}
+.content_1 {
+    font-size: 3rem;
+    color: var(--Light);
+}
+.icons{
+    display: flex;
+}
+.icon{
+    margin-right:30px ;
+}
+.icon img{
+   width: 60px;
+   height: 60px;
+}
+.by{
+    font-size: 2rem;
+}
+.icon_info{
+    text-align:center;
+}
+.feature img{
+    width:150px;
+    margin-right:20px ;
+}
+.feature{
+    background-color: gray;
+    grid-column: 2 / span 6;
+    margin-top: 5%;
+    padding: 30px 0px 0px 20px;
+    display: flex;
+    align-items: left;
+    margin-right: 20px;
+}
+.feature_info{
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+/* Responsive Website */
+@media only screen and (max-width:1100px){
+    .icon img{
+        height: 150px;
+        width: auto;
+
+    }
+    .content_1, .by{
+     font-size: 2.75rem;
+    }
+    .feture{
+        grid-column: 1 / span 7 ;
+    }
+}
+@media only screen and (max-width:850px) {
+    .info{
+        grid-column: 2 / span 7 ;
+    }
+    .icons{
+        flex-direction: column;
+    }
+    .content_1, .by {
+        font-size: 1.75rem;
+    }
+    .feature{
+        flex-direction: column;
+    }
+    
+}
+   

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital art website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: antiquewhite;">
+    <main>
+        <!--Navigation Bar-->
+        <header>
+            <nav>
+                <img class="logo" src=<%= logo.img %> alt="logo">
+                <div class="link">
+                    <a href="#"><%=link1%></a>
+                    <a href="#"><%=link2%></a>
+                    <button class="button_login" href="#"><%=link3%></button>
+                </div>
+            </nav>
+
+        </header>
+        <!--Contents-->
+        <section class="info">
+            <h1 class="content_1"><%=contentfont1 %></h1>
+            <h4 class="by"><%=contentfont2 %></h4>
+            <% obj_contents.forEach(function(contents){ %>
+            <div class="icons">
+                
+                <div class="icon">
+                   
+                    <img src=<%= contents.img %> alt="email icon">
+                    <p class="icon_info"><%= contents.info %></p>
+                </div>
+               
+               <!--
+                <div class="icon">
+                    <img src="image/facebook-svgrepo-com 1.svg" alt="facebook icon">
+                    <p class="icon_info">Alan Ang Patiparn C</p>
+                </div>
+                <div class="icon">
+                    <img src="image/youtube-svgrepo-com 1.svg" alt="youtube icon">
+                    <p class="icon_info">alananhkspace</p>
+                </div>
+                    -->
+            </div>
+            <% })%>
+        </section>
+        
+        <!--Feature Bar-->
+       
+        <section class="feature">
+            <!--Add Parameter that forEach loop-->
+           <% obj_feature.forEach(function(feature){ %>
+
+           
+            <img src= <%= feature.img %> alt="Example pic 1">
+            <p class="feature_info"> <%= feature.side %></p>
+         <% })%>
+             <!--
+            <img src="image/blake yang model real pic done.png" alt="Example pic2">
+            <p class="feature_info">RWBY AU</p>
+            -->
+        </section>
+   
+    </main>
+    
+</body>
+</html>
